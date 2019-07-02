@@ -54,9 +54,11 @@
         alert("I am an alert box!!")
     }
     function startFunctionTaobao() {
-        alert("11111");
-        document.getElementById('#main').style.backgroundColor='#dsafda'
+
+        // document.getElementById('#main').style.backgroundColor='#dsafda';
         var sdk = api.require('crawlerMoudle');
+        alert(sdk);
+
         api.toast({
             msg: sdk
         });
