@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+        <title>APP</title>
+        <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+        <style>
+            html,
+            body,
+            div {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .intro_img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+            #main{
+                display: block;
+            }
+            a.button{
+                display: -webkit-box;
+                -webkit-box-pack: center;
+                -webkit-box-align: center;
+                height: 36px;
+                margin: 8px;
+                background-color: rgba(240,240,240,1.0);
+                border-color: rgba(220,220,220,1.0);
+                border-width: 2px;
+                border-style: solid;
+            }
+            a.active{
+                background-color: rgba(240,240,240,0.6);
+            }
+        </style>
+    </head>
+
+    <body>
+    <div id="main">
+
+        <a class="button" tapmode="active" onclick="startFunctionTaobao()">打开淘宝</a>
+        <a class="button" tapmode="active" onclick="startFunctionCarrier()">打开运营商</a>
+
+    </div>
+        <img src="../../res/intro_1.jpg" class="intro_img" alt="图片" />
+    </body>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript">
+        function startFunctionTaobao() {
+            var sdk = api.require('crawlerMoudle');
+
+            sdk.startFunctionTaobao({
+                user: "1107602",
+                key: "6613d600d19941a094753830bd6fc0af",
+                taskId: '1222222222',
+                xyFunction: 0
+            },function(ret, err){
+                var result = JSON.stringify(ret)
+
+                api.toast({
+                    msg: result.message
+                });
+            });
+        }
+
+        function startFunctionCarrier() {
+            var demo = api.require('crawlerMoudle');
+
+            demo.startFunctionCarrier({
+                user: "1107602",
+                key: "6613d600d19941a094753830bd6fc0af",
+                taskId: '1222222222',
+                xyFunction: 3,
+                mobile:"18721769662",
+                realName:"YJ",
+                idCard:"410328199509099622",
+                password:"",
+                showIdNameInput: true,
+                inputEditing: false
+            },function(ret, err){
+                var result = JSON.stringify(ret)
+                api.toast({
+                    msg: result.message
+                });
+            });
+        }
+
+        apiready = function() {
+
+        };
+    </script>
+
+</html>
