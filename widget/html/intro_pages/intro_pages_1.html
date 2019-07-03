@@ -1,24 +1,36 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
 <head>
+    <title>Module Develop</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
-    <title>APP</title>
-    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
-    <style>
-        html,
-        body,
-        div {
-            margin: 0;
-            padding: 0;
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <style type="text/css">
+        html,body{
+            height: 100%
         }
-
-        .intro_img {
-            width: 100%;
+        body{
+            background-color: #fff;
+            margin: 0;
+        }
+        #wrap{
             height: 100%;
-            display: block;
+            position: relative;
+        }
+        #header{
+            padding-top: 20px;
+            background-color: #5082c2;
+            height: 44px;
+            position: relative;
+        }
+        #header h1{
+            font-size: 20px;
+            height: 44px;
+            line-height: 44px;
+            margin: 0em;
+            color: #fff;
+            margin-left: 100px;
+            margin-right: 100px;
+            text-align: center;
         }
         #main{
             display: block;
@@ -39,48 +51,60 @@
         }
     </style>
 </head>
-
 <body>
-<div id="main">
-    <a class="button" tapmode="active" onclick="startFunctionTaobao()">打开淘宝</a>
-    <a class="button" tapmode="active" onclick="startFunctionCarrier()">打开运营商</a>
-    <input type="button" onclick="display_alert()" value="Display alert box" />
+<div id="wrap">
+    <header id="header">
+        <h1 id="title">授权模块开发</h1>
+    </header>
+    <div id="main">
+        <a class="button" tapmode="active" onclick="startFunctionCarrier()">打开运营商</a>
+        <a class="button" tapmode="active" onclick="startFunction(0)">打开淘宝</a>
+        <a class="button" tapmode="active" onclick="startFunction(1)">打开支付宝</a>
+        <a class="button" tapmode="active" onclick="startFunction(2)">打开支付宝淘宝聚合</a>
+        <a class="button" tapmode="active" onclick="startFunction(4)">打开京东</a>
+        <a class="button" tapmode="active" onclick="startFunction(9)">打开信用卡办卡进度</a>
+        <a class="button" tapmode="active" onclick="startFunction(10)">打开学信网</a>
+        <a class="button" tapmode="active" onclick="startFunction(11)">打开社保</a>
+        <a class="button" tapmode="active" onclick="startFunction(12)">打开公积金</a>
+        <a class="button" tapmode="active" onclick="startFunction(13)">打开邮箱账单</a>
+        <a class="button" tapmode="active" onclick="startFunction(14)">打开饿了么</a>
+        <a class="button" tapmode="active" onclick="startFunction(15)">打开车险保单</a>
+    </div>
 </div>
 </body>
-<script type="text/javascript" src="../../script/api.js"></script>
-<script type="text/javascript">
-    function display_alert()
-    {
-        alert("I am an alert box!!")
-    }
-    function startFunctionTaobao() {
+<script>
 
-        // document.getElementById('#main').style.backgroundColor='#dsafda';
-        var sdk = api.require('crawlerMoudle');
-        api.toast({
-            msg: sdk
-        });
-        sdk.startFunctionTaobao({
-            user: "1107602",
-            key: "6613d600d19941a094753830bd6fc0af",
-            taskId: '1222222222',
-            xyFunction: 0
-        },function(ret, err){
+
+    function startFunction(xyFunction) {
+
+        var sdk = api.require('moduleDemo');
+
+        sdk.xyStartFunction({
+            xyUser: "1107603",
+            xyKey: "6613d600d19941a094753830bd6fc0af",
+            xyTaskId: '1222222222',
+            xyFunction: xyFunction,
+            xyThemeColor: '',
+            xyProtocolTitle:'',
+            xyProtocolUrl:'',
+            xyStatusBarStyle:'1',
+            xyTitleColor:'',
+            xyTaobaoLoginTypes:['oneKey','sm']
+        },function(ret){
             var result = JSON.stringify(ret)
-
             api.toast({
-                msg: result.message
+                msg: ret.message
             });
         });
     }
 
     function startFunctionCarrier() {
-        var demo = api.require('crawlerMoudle');
+        var demo = api.require('moduleDemo');
 
-        demo.startFunctionCarrier({
-            user: "1107602",
-            key: "6613d600d19941a094753830bd6fc0af",
-            taskId: '1222222222',
+        demo.xyStartFunctionCarrier({
+            xyUser: "1107603",
+            xyKey: "6613d600d19941a094753830bd6fc0af",
+            xyTaskId: '1222222222',
             xyFunction: 3,
             mobile:"18721769662",
             realName:"YJ",
@@ -88,17 +112,15 @@
             password:"",
             showIdNameInput: true,
             inputEditing: false
-        },function(ret, err){
-            var result = JSON.stringify(ret)
+        },function(ret){
             api.toast({
-                msg: result.message
+                msg: ret.message
             });
         });
     }
 
-    apiready = function() {
+    function apiready() {
 
-    };
+    }
 </script>
-
 </html>
