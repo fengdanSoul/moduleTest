@@ -1,4 +1,4 @@
-import { runMain } from "module";
+// import { runMain } from "module";
 var xyUser = api.loadSecureValue({
     sync: true,
     key: 'kUser'
@@ -16,6 +16,9 @@ function taobaoVerify(callback) {
 
     switch (os) {
         case 'ios':
+            toast(xyUser);
+            toast(crawlerModule);
+
             crawlerModule.xyStartFunction({
                 xyUser:xyUser,
                 xyKey:xyKey,
