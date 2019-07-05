@@ -20,15 +20,12 @@ function taobaoVerify(callback) {
             });
             var crawlerModule = api.require('XYCrawlerIOS');
 
-            // toast(xyUser);
-            // toast(crawlerModule);
-
             crawlerModule.xyStartFunction({
                 xyUser:xyUser,
                 xyKey:xyKey,
                 xyTerminalId:xyTerminalId,
-                taskId: (new Date()).valueOf(),
-                xyFunction: 0
+                xyTaskId: (new Date()).valueOf(),
+                xyFunction:0
             }, function (ret, err) {
                 console.log('iOS淘宝:::::: ' + JSON.stringify(ret));
                 callback && callback(ret.code, ret.token);
@@ -85,7 +82,6 @@ function carrierVerify(callback) {
                 xyKey:xyKey,
                 xyTerminalId:xyTerminalId,
                 xyTaskId:  (new Date()).valueOf(),
-                xyFunction: 3,
                 mobile:user.phone,
                 realName:user.realName,
                 idCard:user.cardNo,
