@@ -20,8 +20,8 @@ function taobaoVerify(callback) {
             });
             var crawlerModule = api.require('XYCrawlerIOS');
 
-            toast(xyUser);
-            toast(crawlerModule);
+            // toast(xyUser);
+            // toast(crawlerModule);
 
             crawlerModule.xyStartFunction({
                 xyUser:xyUser,
