@@ -7,7 +7,7 @@ function taobaoVerify(callback) {
     switch (os) {
         case 'ios':
 
-
+            toast(xyTerminalId);
             crawlerModule.xyStartFunction({
                 xyUser:xyUser,
                 xyKey:xyKey,
@@ -48,19 +48,6 @@ function getMyTime() {
 // 运营商认证
 function carrierVerify(callback) {
     var user = getUserCache();
-    // var xyUser = api.loadSecureValue({
-    //     sync: true,
-    //     key: 'kUser'
-    // });
-    // var xyKey = api.loadSecureValue({
-    //     sync: true,
-    //     key: 'kKey'
-    // });
-    // var xyTerminalId = api.loadSecureValue({
-    //     sync: true,
-    //     key: 'xyTerminalId'
-    // });
-    // var crawlerModule = api.require('XYCrawlerIOS');
 
     switch (os) {
 

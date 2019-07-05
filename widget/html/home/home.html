@@ -51,21 +51,21 @@
             <span>已完成</span>
         {{?}}
     </div>
-    <div id="taobao-verify"  class="item {{= it.user && it.user.taobaoStatus ? 'is-link' : 'is-link' }}"  tapmode>
+    <div id="taobao-verify" class="item {{= it.user && it.user.taobaoStatus ? '' : 'is-link' }}" tapmode>
         <i class="icon icon-taobao"></i>
         <label>淘宝认证</label>
         {{? it.user && it.user.taobaoStatus }}
             <span>已完成</span>
         {{?}}
     </div>
-    <div id="mobile-verify" class="item {{= it.user && it.user.appleStatus ? 'is-link' : 'is-link' }}" tapmode data-page="../mobile_verify/mobile_verify.html" tapmode>
+    <div id="mobile-verify" class="item {{= it.user && it.user.appleStatus ? '' : 'is-link' }}" tapmode data-page="../mobile_verify/mobile_verify.html" tapmode>
         <i class="icon icon-mobile"></i>
         <label>手机认证</label>
         {{? it.user && it.user.appleStatus }}
             <span>已完成</span>
         {{?}}
     </div>
-    <div id="operator-verify" class="item {{= it.user && it.user.operatorStatus ? 'is-link' : 'is-link' }}" tapmode>
+    <div id="operator-verify" class="item {{= it.user && it.user.operatorStatus ? '' : 'is-link' }}" tapmode>
         <i class="icon icon-operator"></i>
         <label>运营商认证</label>
         {{? it.user && it.user.operatorStatus }}
