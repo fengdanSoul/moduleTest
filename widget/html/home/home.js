@@ -2,6 +2,10 @@ var os = null;
 var crawlerModule = null;
 var authInfoModule = null;
 var user = null;
+var xyUser = '';
+var xyKey = '';
+var xyTerminalId = '';
+// var crawlerModule = api.require('XYCrawlerIOS');
 
 apiready = function() {
     os = api.systemType;
@@ -13,6 +17,19 @@ apiready = function() {
     checkIfLoadData(function (){
         setStatusBarLight();
         getData();
+    });
+
+    xyUser = api.loadSecureValue({
+        sync: true,
+        key: 'kUser'
+    });
+    xyKey = api.loadSecureValue({
+        sync: true,
+        key: 'kKey'
+    });
+    xyTerminalId = api.loadSecureValue({
+        sync: true,
+        key: 'xyTerminalId'
     });
 
     switch (os) {   
