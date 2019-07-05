@@ -51,7 +51,7 @@
             <span>已完成</span>
         {{?}}
     </div>
-    <div id="taobao-verify" class="item {{= it.user && it.user.taobaoStatus ? '' : 'is-link' }}" tapmode>
+    <div id="taobao-verify" class="item {{= it.user && it.user.taobaoStatus ? 'is-link' : 'is-link' }}" tapmode>
         <i class="icon icon-taobao"></i>
         <label>淘宝认证</label>
         {{? it.user && it.user.taobaoStatus }}
