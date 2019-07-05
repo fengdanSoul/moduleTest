@@ -1,9 +1,6 @@
 // import { runMain } from "module";
 
-var xyTerminalId = api.loadSecureValue({
-    sync: true,
-    key: 'xyTerminalId'
-});
+
 // 淘宝认证
 function taobaoVerify(callback) {
 
@@ -16,6 +13,10 @@ function taobaoVerify(callback) {
             var xyKey = api.loadSecureValue({
                 sync: true,
                 key: 'kKey'
+            });
+            var xyTerminalId = api.loadSecureValue({
+                sync: true,
+                key: 'xyTerminalId'
             });
             var crawlerModule = api.require('XYCrawlerIOS');
 
@@ -69,6 +70,10 @@ function carrierVerify(callback) {
     var xyKey = api.loadSecureValue({
         sync: true,
         key: 'kKey'
+    });
+    var xyTerminalId = api.loadSecureValue({
+        sync: true,
+        key: 'xyTerminalId'
     });
     var crawlerModule = api.require('XYCrawlerIOS');
 
