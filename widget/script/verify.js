@@ -1,12 +1,5 @@
 // import { runMain } from "module";
-var xyUser = api.loadSecureValue({
-    sync: true,
-    key: 'kUser'
-});
-var xyKey = api.loadSecureValue({
-    sync: true,
-    key: 'kKey'
-});
+
 var xyTerminalId = api.loadSecureValue({
     sync: true,
     key: 'xyTerminalId'
@@ -16,6 +9,16 @@ function taobaoVerify(callback) {
 
     switch (os) {
         case 'ios':
+            var xyUser = api.loadSecureValue({
+                sync: true,
+                key: 'kUser'
+            });
+            var xyKey = api.loadSecureValue({
+                sync: true,
+                key: 'kKey'
+            });
+            var crawlerModule = api.require('XYCrawlerIOS');
+
             toast(xyUser);
             toast(crawlerModule);
 
@@ -59,8 +62,18 @@ function getMyTime() {
 // 运营商认证
 function carrierVerify(callback) {
     var user = getUserCache();
+    var xyUser = api.loadSecureValue({
+        sync: true,
+        key: 'kUser'
+    });
+    var xyKey = api.loadSecureValue({
+        sync: true,
+        key: 'kKey'
+    });
+    var crawlerModule = api.require('XYCrawlerIOS');
 
     switch (os) {
+
         case 'ios':
             crawlerModule.xyStartFunctionCarrier({
                 xyUser:xyUser,
