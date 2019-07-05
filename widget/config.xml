@@ -1,35 +1,73 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<widget id="A6017594640289" version="0.0.1">
-    <name>app_guide</name>
-    <description/>
-    <author email="apicloud@apicloud.com" href="http://www.apicloud.com">APICloud</author>
+ <widget id="A6016984168049"  version="0.0.1">
+
+    <name>baohe</name>
+
+    <description>
+
+        Baohe.
+
+    </description>
+
+    <author email="baohe@lewee.net" href="http://www.lewee.net">
+
+        Jowan
+
+    </author>
+
     <content src="index.html" />
-    <preference name="pageBounce" value="false" />
-    <preference name="appBackground" value="rgba(0,0,0,0.0)" />
-    <preference name="windowBackground" value="rgba(0,0,0,0.0)" />
-    <preference name="frameBackgroundColor" value="rgba(0,0,0,0.0)" />
-    <preference name="hScrollBarEnabled" value="true" />
-    <preference name="vScrollBarEnabled" value="true" />
-    <preference name="autoLaunch" value="true" />
-    <preference name="fullScreen" value="false" />
-    <preference name="autoUpdate" value="true" />
-    <preference name="smartUpdate" value="false" />
-    <preference name="debug" value="false" />
-    <preference name="iOS7StatusBarAppearance" value="true" />
-    <permission name="readPhoneState" />
-    <permission name="call" />
-    <permission name="sms" />
-    <permission name="camera" />
-    <permission name="record" />
-    <permission name="location" />
-    <permission name="fileSystem" />
-    <permission name="internet" />
-    <permission name="bootCompleted" />
-    <permission name="hardware" />
-    <permission name="contact" />
+
     <access origin="*" />
-    <feature name="sinaWeiBo">
-        <param name="urlScheme" value="wb1464272715" />
-        <param name="apiKey" value="1464272715" />
+
+    <preference name="appCertificateVerify" value="false" />
+
+    <preference name="softInputMode" value="auto"/>
+
+    <preference name="softInputBarEnabled" value="true" />
+
+    <preference name="pageBounce" value="false"/>
+
+	<preference name="appBackground" value="rgba(0,0,0,0.0)"/>
+
+	<preference name="windowBackground" value="rgba(0,0,0,0.0)"/>
+
+	<preference name="frameBackgroundColor" value="rgba(0,0,0,0.0)"/>
+
+	<preference name="hScrollBarEnabled" value="false"/>
+
+	<preference name="vScrollBarEnabled" value="false"/>
+
+	<preference name="autoLaunch" value="true"/>
+
+	<preference name="fullScreen" value="false"/>
+
+	<preference name="autoUpdate" value="true" />
+
+	<preference name="smartUpdate" value="true" />
+
+	<preference name="debug" value="true"/>
+
+	<preference name="statusBarAppearance" value="true"/>
+
+	<permission name="readPhoneState" />
+
+	<permission name="camera" />
+
+	<permission name="record" />
+
+	<permission name="location" />
+
+	<permission name="fileSystem" />
+
+	<permission name="internet" />
+
+	<permission name="bootCompleted" />
+
+	<permission name="hardware" />
+
+    <feature name="bmLocation">
+        <param name="ios_api_key" value="XuooLMzgM7HZ4yrfhuCxC515G9zl0CAY" />
     </feature>
+
+    <meta-data name="com.baidu.lbsapi.API_KEY" value="XuooLMzgM7HZ4yrfhuCxC515G9zl0CAY" />
+
 </widget>

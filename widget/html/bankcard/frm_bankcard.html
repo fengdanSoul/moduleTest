@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./bankcard.css" />
+</head>
+<body>
+
+<form action="">
+    <div class="menu-group">
+        <div class="item no-icon">
+            <label>姓名</label>
+            <input name="realName" type="text" maxlength="8" required err-msg="请输入姓名" readonly>
+        </div>
+        <div class="item no-icon">
+            <label>身份证号</label>
+            <input name="cardNo" type="text" maxlength="18" required err-msg="请输入身份证号" readonly>
+        </div>
+        <div class="item no-icon">
+            <label>银行卡号</label>
+            <input name="number" type="tel" maxlength="28" required err-msg="请输入银行卡号">
+        </div>
+    </div>
+
+    <div class="menu-group">
+        <div class="item no-icon">
+            <label>手机号</label>
+            <input name="phone" type="tel" maxlength="11" value="" err-msg="请输入手机号" readonly>
+        </div>
+        <div class="item no-icon">
+            <label>验证码</label>
+            <div class="input-box">
+                <input name="code" type="tel" maxlength="6" required err-msg="请输入验证码">
+            </div>
+            <span class="sms-btn" tapmode>获取验证码</span>
+        </div>
+    </div>
+</form>
+
+<div class="submit-btn">
+    <button tapmode>提交</button>
+</div>
+
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/zepto.js"></script>
+<script type="text/javascript" src="../../script/functions.js"></script>
+<script type="text/javascript" src="./bankcard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+  <link rel="stylesheet" type="text/css" href="./home.css" />
+</head>
+<body>
+
+<div id="loan">
+    <img src="../../image/banner.jpg" alt="">
+    <div class="field-group">
+        <div class="field">
+            <label>回收金额</label>
+            <span class="money"><i>¥</i> <em class="price">-</em></span>
+        </div>
+        <div class="field">
+            <label>周期(天)</label>
+            <span><em class="period">- </em>天</span>
+        </div>
+        <button class="loan-btn" type="button" tapmode data-page="../loan/index/loan.html">去拿钱</button>
+    </div>
+</div>
+
+<div class="menu-group"></div>
+<div class="home-tips">所有认证完成后请点击去拿钱</div>
+
+<script id="verify-tpl" type="text/x-dot-template">
+    <div id="basic-verify" class="item {{= it.user && it.user.basicInfoStatus ? '' : 'is-link' }}" tapmode data-page="../basic_verify/basic_verify.html">
+        <i class="icon icon-data"></i>
+        <label>基本信息认证</label>
+        {{? it.user && it.user.basicInfoStatus }}
+            <span>已完成</span>
+        {{?}}
+    </div>
+    <div id="id-verify" class="item {{= it.user && it.user.identityStatus ? '' : 'is-link' }}" tapmode>
+        <i class="icon icon-idcard"></i>
+        <label>身份认证</label>
+        {{? it.user && it.user.identityStatus == 1 }}
+            <span>已完成</span>
+        {{?}}
+    </div>
+    <div id="bankcard-verify" class="item {{= it.user && it.user.bankCardStatus ? '' : 'is-link' }}" tapmode data-page="../bankcard/bankcard.html">
+        <i class="icon icon-bank-card"></i>
+        <label>银行卡认证</label>
+        {{? it.user && it.user.bankCardStatus }}
+            <span>已完成</span>
+        {{?}}
+    </div>
+    <div id="taobao-verify" class="item {{= it.user && it.user.taobaoStatus ? '' : 'is-link' }}" tapmode>
+        <i class="icon icon-taobao"></i>
+        <label>淘宝认证</label>
+        {{? it.user && it.user.taobaoStatus }}
+            <span>已完成</span>
+        {{?}}
+    </div>
+    <div id="mobile-verify" class="item {{= it.user && it.user.appleStatus ? '' : 'is-link' }}" tapmode data-page="../mobile_verify/mobile_verify.html" tapmode>
+        <i class="icon icon-mobile"></i>
+        <label>手机认证</label>
+        {{? it.user && it.user.appleStatus }}
+            <span>已完成</span>
+        {{?}}
+    </div>
+    <div id="operator-verify" class="item {{= it.user && it.user.operatorStatus ? '' : 'is-link' }}" tapmode>
+        <i class="icon icon-operator"></i>
+        <label>运营商认证</label>
+        {{? it.user && it.user.operatorStatus }}
+            <span>已完成</span>
+        {{?}}
+    </div>
+</script>
+
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/zepto.js"></script>
+<script type="text/javascript" src="../../script/md5.min.js"></script>
+<script type="text/javascript" src="../../lib/dotT.js"></script>
+<script type="text/javascript" src="../../script/functions.js"></script>
+<script type="text/javascript" src="../../script/verify.js"></script>
+<script type="text/javascript" src="./home.js"></script>
+
+</body>
+</html>

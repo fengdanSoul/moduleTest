@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./apply.css" />
+</head>
+
+<body class="hide">
+
+<div class="menu-title">申请信息</div>
+<div class="groups"></div>
+
+<div class="rule">
+    <i class="icon" tapmode></i>
+    我已阅读并同意<span class="text-danger" tapmode>《租赁协议》</span>
+</div>
+
+<div class="submit-btn">
+    <button tapmode>提交申请</button>
+</div>
+
+
+<script id="tpl" type="text/x-dot-template">
+
+<div class="menu-group mb-10">
+    <div class="item no-icon">
+        <label>商户名称</label>
+        <span>{{= it.seller }}</span>
+    </div>
+    <div class="item no-icon">
+        <label>设备型号</label>
+        <span>{{= it.model }}</span>
+    </div>
+    <div class="item no-icon">
+        <label>回收金额</label>
+        <span>{{= it.price }}元</span>
+    </div>
+    <div class="item no-icon">
+        <label>租用期限</label>
+        <span>{{= it.leaseTerm }}天</span>
+    </div>
+    <div class="item no-icon">
+        <label>使用租金</label>
+        <span>{{= it.rentPrice }}元</span>
+    </div>
+</div>
+
+<div class="menu-group">
+    <div class="item no-icon">
+        <label>到账金额</label>
+        <span>{{= it.arrivalAccount }}元</span>
+    </div>
+    <div class="item no-icon">
+        <label>回收本金</label>
+        <span>{{= it.price }}元</span>
+    </div>
+    <div class="item no-icon">
+        <label>到账银行卡</label>
+        <span>{{= it.arrivalBank }}</span>
+    </div>
+</div>
+
+</script>
+
+<script type="text/javascript" src="../../../script/api.js"></script>
+<script type="text/javascript" src="../../../script/zepto.js"></script>
+<script type="text/javascript" src="../../../lib/dotT.js"></script>
+<script type="text/javascript" src="../../../script/functions.js"></script>
+<script type="text/javascript" src="./apply.js"></script>
+
+</body>
+</html>

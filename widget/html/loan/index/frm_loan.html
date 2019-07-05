@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./loan.css" />
+</head>
+<body>
+
+<div class="loan-list"></div>
+
+<div class="empty-box">
+    <img src="../../../image/empty.png">
+    <p>还没有回收项目哦~</p>
+</div>
+
+<script id="list-tpl" type="text/x-dot-template">
+
+{{? it.length > 0 }}
+<div class="tips">
+    提示：请选择产品并点击确认
+</div>
+{{?}}
+
+{{ for(var x in it) { }}
+
+<div class="item" data-id="{{= it[x].id }}" tapmode>
+    <div class="title">
+        <span class="shop-name">{{= it[x].seller }}</span>
+        <div class="btns">
+            <button class="btn-danger" tapmode>立即回租</button>
+        </div>
+    </div>
+    <div class="info">
+        <p><span>回收金额 (元)</span><span>{{= it[x].price }}元</span></p>
+        <p><span>租金 (元/天)</span><span>{{= it[x].rent }}元</span></p>
+        <p><span>期限 (天)</span><span>{{= it[x].leaseTerm }}</span></p>
+    </div>
+</div>
+
+{{ } }}
+</script>
+
+<script type="text/javascript" src="../../../script/api.js"></script>
+<script type="text/javascript" src="../../../script/zepto.js"></script>
+<script type="text/javascript" src="../../../lib/dotT.js"></script>
+<script type="text/javascript" src="../../../script/functions.js"></script>
+<script type="text/javascript" src="./loan.js"></script>
+
+</body>
+</html>

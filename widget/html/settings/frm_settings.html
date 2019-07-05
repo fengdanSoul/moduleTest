@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./settings.css" />
+</head>
+<body>
+    <div class="menu-group">
+        <div class="item is-link avatar no-icon" tapmode>
+            <img src="../../image/avatar_default.jpg">
+            <span class="text-danger">修改</span>
+        </div>
+    </div>
+
+    <div class="menu-group">
+        <div class="item no-icon">
+            <label>当前账号</label>
+            <span id="phone">--</span>
+        </div>
+    </div>
+
+    <div class="menu-group">
+        <div id="clear-cache" class="item no-icon" tapmode>
+            <label>清理缓存</label>
+            <span id="cache-size" class="text-danger">--</span>
+        </div>
+        <div id="update" class="item no-icon" tapmode>
+            <label>检查更新</label>
+            <span>--</span>
+        </div>
+    </div>
+
+    <button id="logout" class="text-danger" tapmode>退出当前账号</button>
+
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript" src="../../script/zepto.js"></script>
+    <script type="text/javascript" src="../../script/functions.js"></script>
+    <script type="text/javascript" src="./settings.js"></script>
+</body>
+</html>

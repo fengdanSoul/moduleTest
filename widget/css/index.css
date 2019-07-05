@@ -1,0 +1,79 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-flex-flow: column;
+}
+
+.flex-1 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+}
+
+header.user{
+     background-image: url(../image/user_header.png);
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     background-position: center 0;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    line-height: 30px;
+    text-align: center;
+    border-top: #e6e6e6 solid 1px;
+}
+
+footer ul{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+footer li{
+  flex: 1;
+  text-align: center;
+  line-height: 20px;
+}
+
+footer i{
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  background-image: url('../image/icons.png');
+  background-repeat: no-repeat;
+  background-size: 356%;
+}
+
+footer .active span{
+  color: #c81623;
+}
+
+footer .icon-home{
+    background-position: -55px -8px;
+}
+
+footer .icon-user{
+  background-position: -55px -52px;
+}
+
+footer .active .icon-home{
+  background-position: -10px -8px;
+}
+
+footer .active .icon-user{
+  background-position: -10.5px -52px;
+}
+
+footer span{
+  display: block;
+}

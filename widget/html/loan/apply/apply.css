@@ -1,0 +1,40 @@
+.menu-title{
+    font-size: 12px;
+    padding: 10px 15px;
+}
+
+.menu-group .item label{
+    color: #666;
+}
+
+.menu-group .item span{
+    color: #333;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.rule{
+    display: flex;
+    align-items: center;
+    color: #81878d;
+    padding: 0 15px;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.rule .icon{
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    display: block;
+    margin-right: 10px;
+    border: #ccc solid 1px;
+}
+
+.rule .selected{
+    background: url(../../../image/rule_selected.png) center no-repeat;
+    background-size: 100%;
+    border-color: #db4003;
+}

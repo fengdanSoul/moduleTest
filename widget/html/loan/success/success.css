@@ -1,0 +1,92 @@
+.result-box{
+    height: 130px;
+    display: flex;
+    align-items: center;
+    background-color: #ffa96f;
+}
+
+.result-box .tips{
+    flex: 1;
+    color: #fff;
+    padding-left: 15px;
+}
+
+.result-box img{
+    height: 75%;
+    display: block;
+    margin-right: 15px;
+}
+
+.result-box .tips p{
+    padding-left: 30px;
+}
+
+.result-box .tips p:first-child{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    background: url(../../../image/icon_loan_success.png) 0 no-repeat;
+    background-size: auto 100%;
+}
+
+.result-box .tips p:last-child{
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.menu-group .item span{
+    color: #333;
+}
+
+.menu-group .item label{
+    color: #999;
+}
+
+.menu-group .time span{
+    font-family: arial;
+}
+
+.menu-group .recycle span{
+    color: #db4003;
+}
+
+.menu-group .time label{
+    color: #333;
+}
+
+.btn-group{
+    margin: 30px 15px;
+    display: flex;
+}
+
+.btn-group .btn-box{
+    flex: 1;
+}
+
+.btn-group .btn-box{
+    box-sizing: border-box;
+}
+
+.btn-group .btn-box:first-child{
+    padding-right: 5px;
+}
+
+.btn-group .btn-box:last-child{
+    padding-left: 5px;
+}
+
+.btn-group button{
+    width: 100%;
+    height: 44px;
+    border-radius: 5px;
+    border: #db4003 solid 1px;
+}
+
+.btn-group .btn-box:first-child button{
+    color: #db4003;
+}
+
+.btn-group .btn-box:last-child button{
+    color: #fff;
+    background: #db4003;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+</head>
+
+<body>
+    <header class="light">
+        <!-- <i class="page-back" tapmode></i> -->
+    </header>
+</body>
+
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/zepto.js"></script>
+<script type="text/javascript" src="../../script/functions.js"></script>
+<script type="text/javascript" src="../../script/init_frame.js"></script>
+<script>
+function pageReady(){
+    api.addEventListener({
+        name: 'keyback'
+    }, function(ret, err) {
+        api.closeWidget();
+    });
+}
+</script>
+</html>

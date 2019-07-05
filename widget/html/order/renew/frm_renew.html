@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./renew.css" />
+</head>
+<body class="hide">
+
+<div class="menu-group"></div>
+
+<div class="submit-btn">
+    <button tapmode>申请续租</button>
+</div>
+
+<script id="tpl" type="text/x-dot-template">
+<div class="item no-icon">
+    <label>续租期限</label>
+    <span class="text-danger">{{= it.loanPeriod }}天</span>
+</div>
+<div class="item no-icon">
+    <label>续租回收日</label>
+    <span>{{= it.inRepaymentTime }}</span>
+</div>
+<div class="item no-icon expired">
+    <label>到期回收</label>
+    <span class="text-danger">{{= it.price }}元</span>
+</div>
+<div class="item no-icon">
+    <label>续租租金</label>
+    <span>{{= it.rentPrice }}元</span>
+</div>
+</script>
+
+<script type="text/javascript" src="../../../script/api.js"></script>
+<script type="text/javascript" src="../../../script/zepto.js"></script>
+<script type="text/javascript" src="../../../lib/dotT.js"></script>
+<script type="text/javascript" src="../../../script/functions.js"></script>
+<script type="text/javascript" src="./renew.js"></script>
+
+</body>
+</html>

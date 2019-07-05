@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./fail.css" />
+</head>
+<body>
+
+<div class="fail-page hide">
+    <div class="fail-description">
+        <img class="icon" src="../../../image/order_fail.png">
+
+        <div class="tips">
+            很遗憾您的回租申请未通过<br>拒绝原因可查询以下平台
+            <p>请点击</p>
+        </div>
+
+        <div class="other-apps">
+            <span>其他平台</span>
+        </div>
+
+        <div class="apps"></div>
+    </div>
+</div>
+
+<script id="list-tpl" type="text/x-dot-template">
+{{ for(var x in it) { }}
+<div class="item" data-link="{{= it[x].link }}" tapmode>
+    <img src="{{= it[x].thumb }}">
+    <span>{{= it[x].name }}</span>
+</div>
+{{ } }}
+</script>
+
+<script type="text/javascript" src="../../../script/api.js"></script>
+<script type="text/javascript" src="../../../script/zepto.js"></script>
+<script type="text/javascript" src="../../../lib/dotT.js"></script>
+<script type="text/javascript" src="../../../script/functions.js"></script>
+<script type="text/javascript" src="./fail.js"></script>
+
+</body>
+</html>

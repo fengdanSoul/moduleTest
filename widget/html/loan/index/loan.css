@@ -1,0 +1,103 @@
+.tips{
+    color: #f44d4f;
+    background: #fff;
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    border-top: #ededed solid 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.loan-list{
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.loan-list .item{
+    background: #fff;
+    margin-bottom: 10px;
+    border-bottom: #ededed solid 1px;
+}
+
+.loan-list .item .title{
+    padding: 0 15px;
+    line-height: 38px;
+    font-size: 14px;
+    display: flex;
+    border-bottom: #ededed solid 1px;
+}
+
+.loan-list .title .shop-name{
+    flex: 1;
+}
+
+.loan-list .title .status{
+    text-align: right;
+}
+
+.loan-list .text-danger{
+    color: #ec4444 !important;
+}
+
+.loan-list .text-success{
+    color: #2fc417 !important;
+}
+
+.loan-list .info{
+    text-align: center;
+    padding: 15px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.loan-list .info p{
+    width: 33.33333%;
+    line-height: 20px;
+    float: left;
+    overflow: hidden;
+}
+
+.loan-list .info p span{
+    display: block;
+}
+
+.loan-list .info p span:first-child{
+    color: #999;
+    font-size: 14px;
+}
+
+.loan-list .info p span:last-child{
+    padding-top: 5px;
+    font-size: 18px;
+    /*font-weight: bold;*/
+}
+
+.loan-list .item .action{
+    font-size: 14px;
+    display: flex;
+    padding: 8px 15px;
+    border-top: #ededed solid 1px;
+    align-items: center;
+}
+
+.loan-list .item .btns{
+    text-align: right;
+}
+
+.loan-list .item .title button{
+    color: #666;
+    height: 26px;
+    border: #dbdbdb solid 1px;
+    border-radius: 12px;
+    padding: 0 14px;
+}
+
+.loan-list .item .title .btn-danger{
+    border-color: #ec4444;
+    background: #ec4444;
+    color: #fff;
+}

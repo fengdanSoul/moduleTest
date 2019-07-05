@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../lib/select/select.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./basic_verify.css" />
+</head>
+<body>
+
+<form action="">
+    <div class="menu-title">基本信息</div>
+    <div class="menu-group">
+        <div class="item is-link no-icon">
+            <label>婚姻状况</label>
+            <input id="marital" name="maritalStatus" type="text" readonly placeholder="请选择" tapmode required err-msg="请选择婚姻状况">
+        </div>
+        <div class="item is-link no-icon">
+            <label>学历</label>
+            <input id="education" name="education" type="text" value="" readonly placeholder="请选择" required tapmode err-msg="请选择学历">
+        </div>
+        <div class="item no-icon">
+            <label>现居住地</label>
+            <input name="liveAddress" type="text" placeholder="请填写" required err-msg="请填写现居住地">
+        </div>
+    </div>
+
+    <div class="menu-title">紧急联系人<span>（至少填写一位直系亲属）</span></div>
+    <div class="menu-group">
+        <div id="contact-1" class="contact-group" tapmode>
+            <div class="item no-icon">
+                <label>联系人一</label>
+                <input name="contactsName1" type="text" readonly placeholder="请从通讯录获取" readonly required err-msg="请选择联系人一">
+            </div>
+            <div class="item no-icon">
+                <label>联系方式</label>
+                <input name="contactsPhone1" type="text" readonly placeholder="请从通讯录获取" readonly required err-msg="请选择联系人一">
+            </div>
+        </div>
+
+        <div class="item is-link no-icon">
+            <label>关系</label>
+            <input id="relation-1" name="contactsRelationship1" type="text" readonly placeholder="请选择" tapmode readonly required err-msg="请选择联系人一关系">
+        </div>
+
+        <div id="contact-2" class="contact-group" tapmode>
+            <div class="item no-icon">
+                <label>联系人二</label>
+                <input name="contactsName2" type="text" readonly placeholder="请从通讯录获取" readonly required err-msg="请选择联系人二">
+            </div>
+            <div class="item no-icon">
+                <label>联系方式</label>
+                <input name="contactsPhone2" type="text" readonly placeholder="请从通讯录获取" readonly required err-msg="请选择联系人二">
+            </div>
+        </div>
+        <div class="item is-link no-icon">
+            <label>关系</label>
+            <input id="relation-2" name="contactsRelationship2" type="text" readonly placeholder="请选择" tapmode readonly required err-msg="请选择联系人二关系">
+        </div>
+    </div>
+</form>
+
+<div class="submit-btn">
+    <button tapmode>提交</button>
+</div>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=SqhP5D7MF3A0Ljz8N7nuUORM0BKoKsss"></script>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../lib/select/select.js"></script>
+<script type="text/javascript" src="../../script/zepto.js"></script>
+<script type="text/javascript" src="../../script/functions.js"></script>
+<script type="text/javascript" src="./basic_verify.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+.menu-title{
+    font-size: 12px;
+    padding: 10px 15px;
+}
+
+.menu-title span{
+    color: #db4003;
+}
+
+.menu-group .item label{
+    width: 80px;
+    flex: none;
+}
+
+.menu-group .contact-group{
+    position: relative;
+}
+
+.menu-group .contact-group:after{
+    content: '';
+    width: 35px;
+    height: 30px;
+    margin-top: -15px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background: #fff url(../../image/icon_contact.png) right center no-repeat;
+    background-size: 20px auto;
+}
+
+.menu-group .contact-group .item:last-child{
+    border-bottom: #ededed solid 1px;
+}

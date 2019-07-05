@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./mobile_verify.css" />
+</head>
+<body>
+
+<form action="">
+    <div class="menu-title">上传手机型号<span class="guide" data-id="4" tapmode>（操作详情）</span></div>
+    <div id="imei-box">
+        <input name="serialNumber" type="text" placeholder="请填写您的手机序列号" required error-msg="请填写您的手机序列号">
+    </div>
+
+    <div class="menu-title">上传手机信息截图<span class="guide" data-id="5" tapmode>（操作详情）</span></div>
+    <div class="image-box">
+        <div class="tips">请上传您的手机信息截图</div>
+        <div class="wrap">
+            <div class="upload-btn" tapmode>
+                <p><img src="../../image/icon_image_upload.png"></p>
+            </div>
+        </div>
+
+        <input name="image" type="hidden" required err-msg="请上传您的手机信息截图">
+    </div>
+</form>
+
+<div class="submit-btn">
+    <button tapmode>确定</button>
+</div>
+
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/zepto.js"></script>
+<script type="text/javascript" src="../../script/functions.js"></script>
+<script type="text/javascript" src="./mobile_verify.js"></script>
+
+</body>
+</html>

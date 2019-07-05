@@ -1,0 +1,150 @@
+html, body, .order-page{
+    height: 100%;
+}
+
+.order-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.page-body{
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.timeline{
+    padding: 15px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.timeline .item{
+    display: flex;
+    align-items: stretch;
+}
+
+.timeline .item .status{
+    position: relative;
+}
+
+.timeline .item .status:before, .timeline .item .status:after{
+    content: '';
+    display: block;
+    width: 1px;
+    background: #ccc;
+    position: absolute;
+    left: 50%;
+}
+
+.timeline .item .status:before{
+    top: 0;
+    height: 32px;
+}
+
+.timeline .item .status:after{
+    top: 32px;
+    bottom: 0;
+}
+
+.timeline .item:first-child .status:before, .timeline .item:last-child .status:after{
+    display: none;
+}
+
+.timeline .item .status .icon{
+    width: 18px;
+    height: 18px;
+    background: url(../../../image/timeline.png) no-repeat;
+    background-position: -6px;
+    background-size: auto 30px;
+    border-radius: 50%;
+    display: block;
+    position: relative;;
+    top: 32px;
+    margin-top: -9px;
+    z-index: 2;
+}
+
+.timeline .item:first-child .status .icon{
+    background-position: -36px;
+}
+
+.timeline .item .content{
+    flex: 1;
+    padding: 10px;
+}
+
+.timeline .item .title{
+    display: flex;
+    line-height: 20px;
+}
+
+.timeline .item .title p{
+    flex: 1;
+    font-size: 16px;
+}
+
+.timeline .item .title span{
+    color: #999;
+    font-size: 14px;
+    font-family: arial;
+    display: block;
+}
+
+.timeline .item .memo{
+    font-size: 14px;
+    display: flex;
+    align-items: baseline;
+}
+
+.timeline .item .memo .tips{
+    color: #999;
+    flex: 1;
+}
+
+.timeline .item .actions span{
+    display: block;
+    text-align: right;
+    color: #db4003;
+}
+
+.timeline .item .actions span:first-child{
+    padding: 5px 0 15px;
+}
+
+.overdue{
+    padding-top: 10px;
+}
+
+.overdue p{
+    color: #ec4444;
+    text-align: center;
+    font-size: 17px;
+    background: #fff;
+    padding: 15px;
+}
+
+.renew{
+    /*padding: 0 15px;*/
+    padding-top: 10px;
+}
+
+.renew .box{
+    background: #fff;
+    padding: 10px 0 20px;
+}
+
+.renew p{
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.renew p .text-danger{
+    color: #ec4444 !important;
+    font-family: arial;
+}
+
+.renew .submit-btn{
+    margin: 0 15px;
+}

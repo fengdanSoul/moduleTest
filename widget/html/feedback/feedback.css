@@ -1,0 +1,77 @@
+.menu-title{
+    color: #999;
+    font-size: 12px;
+    padding: 10px 15px 5px;
+}
+
+.menu-group .icon{
+    width: 20px;
+    height: 20px;
+    background-image: url(../../image/select.png);
+    background-size: 380%;
+    background-position: -47px -9px;
+}
+
+.menu-group .active .icon{
+    background-position: -9px -9px;
+}
+
+#content{
+    background: #fff;
+    padding: 15px;
+}
+
+#content textarea{
+    width: 100%;
+    min-height: 150px;
+    line-height: 24px;
+}
+
+#content textarea::-webkit-input-placeholder{
+    color: #b2b2b2;
+    font-size: 14px;
+}
+
+#content .tips, .image-box .tips{
+    text-align: right;
+    font-size: 12px;
+    font-family: arial;
+    overflow: hidden;
+    clear: both;
+}
+
+#content .tips span, .image-box span{
+    padding: 0 2px;
+}
+
+#content .tips span:last-child, .image-box .tips span:last-child{
+    color: #999;
+}
+
+.image-box .tips{
+    padding: 10px 0;
+}
+
+.image-box{
+    background: #fff;
+    padding: 15px 15px 5px 0;
+    overflow: hidden;
+}
+
+.image-box .item, .upload-btn{
+    display: block;
+    width: calc(20% - 15px);
+    margin-left: 15px;
+    float: left;
+}
+
+.image-box .item p{
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.image-box img{
+    width: 100%;
+    display: block;
+}

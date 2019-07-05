@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./success.css" />
+</head>
+<body>
+
+<div class="result-box">
+    <div class="tips">
+        <p>您的申请已经提交！</p>
+        <p>我们会尽快进行审核，请耐心等待~</p>
+    </div>
+    <img src="../../../image/loan_success_bg.png" alt="">
+</div>
+
+<div class="menu-group"></div>
+
+<script id="tpl" type="text/x-dot-template">
+    <div class="item no-icon">
+        <label>回收金额</label>
+        <span>{{= it.price }}元</span>
+    </div>
+    <div class="item no-icon">
+        <label>租用期限</label>
+        <span>{{= it.loanPeriod }}天</span>
+    </div>
+    <div class="item no-icon">
+        <label>到账金额</label>
+        <span>{{= it.arrivalAccount }}元</span>
+    </div>
+    <div class="item no-icon time recycle">
+        <label>回收时间</label>
+        <span>{{= it.inRepaymentTime }}</span>
+    </div>
+    <div class="item no-icon time">
+        <label>申请时间</label>
+        <span>{{= it.createTime }}</span>
+    </div>
+</script>
+
+<div class="btn-group">
+    <div class="btn-box"><button id="back-to-home" tapmode>返回首页</button></div>
+    <div class="btn-box"><button id="go-to-order" tapmode>查看详情</button></div>
+</div>
+
+<script type="text/javascript" src="../../../script/api.js"></script>
+<script type="text/javascript" src="../../../script/zepto.js"></script>
+<script type="text/javascript" src="../../../lib/dotT.js"></script>
+<script type="text/javascript" src="../../../script/functions.js"></script>
+<script type="text/javascript" src="./success.js"></script>
+
+</body>
+</html>

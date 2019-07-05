@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./order.css" />
+</head>
+<body>
+
+<div class="order-list"></div>
+
+<div class="empty-box">
+    <img src="../../../image/empty.png">
+    <p>您还没有订单哦~</p>
+</div>
+
+<script id="list-tpl" type="text/x-dot-template">
+{{ for(var x in it) { }}
+
+<div class="item" data-id="{{= it[x].id }}">
+    <div class="title">
+        <span class="order-no">订单编号：{{= it[x].number }}</span>
+        <span data-status="{{= it[x].status }}" class="status {{= orderStatus(it[x].status).style }}">
+        {{= orderStatus(it[x].status).text }}
+        </span>
+    </div>
+    <div class="info" data-id="{{= it[x].id }}" tapmode>
+        <p><span>回收金额 (元)</span><span>{{= it[x].price }}元</span></p>
+        <p><span>租金</span><span>{{= it[x].rentPrice }}元</span></p>
+        <p><span>期限 (天)</span><span>{{= it[x].loanPeriod }}</span></p>
+    </div>
+
+    {{? it[x].status == 3 }}
+    <div class="action">
+        <p>回收日期：{{= it[x].inRepaymentTime }}</p>
+        <div class="btns">
+            <button class="btn-danger renew" tapmode>申请续租</button>
+        </div>
+    </div>
+    {{?}}
+
+    {{? it[x].status == 5 }}
+    <div class="action">
+        <p>您已逾期<span class="text-danger">{{= it[x].overdueDay }}</span>天，请及时回收</p>
+    </div>
+    {{?}}
+
+    {{? it[x].status == 4 }}
+    <div class="action">
+        <div class="btns">
+            <button class="destroy-btn" tapmode>删除订单</button>
+        </div>
+    </div>
+    {{?}}
+</div>
+
+{{ } }}
+</script>
+
+<script type="text/javascript" src="../../../script/api.js"></script>
+<script type="text/javascript" src="../../../script/zepto.js"></script>
+<script type="text/javascript" src="../../../lib/dotT.js"></script>
+<script type="text/javascript" src="../../../script/functions.js"></script>
+<script type="text/javascript" src="../functions.js"></script>
+<script type="text/javascript" src="./order.js"></script>
+
+</body>
+</html>

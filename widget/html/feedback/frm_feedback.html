@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./feedback.css" />
+</head>
+<body>
+
+<form action="">
+    <div class="menu-title">(必选)请选择你想反馈的问题点</div>
+    <div class="menu-group">
+        <div class="item" data-value="1" tapmode>
+            <i class="icon"></i>
+            <label>认证问题</label>
+        </div>
+        <div class="item" data-value="2" tapmode>
+            <i class="icon"></i>
+            <label>回租问题</label>
+        </div>
+        <div class="item" data-value="3" tapmode>
+            <i class="icon"></i>
+            <label>回收问题</label>
+        </div>
+        <div class="item" data-value="4" tapmode>
+            <i class="icon"></i>
+            <label>体验与界面问题</label>
+        </div>
+        <div class="item" data-value="5" tapmode>
+            <i class="icon"></i>
+            <label>其他问题</label>
+        </div>
+    </div>
+
+    <input name="type" type="hidden" required err-msg="请选择你想反馈的问题点">
+
+    <div class="menu-title">请补充详细问题和意见</div>
+    <div id="content">
+        <textarea name="content" rows="8" cols="80" placeholder="您的意见将会帮助我们更快成长" required err-msg="请输入详细问题和意见"></textarea>
+        <div class="tips">
+            <span>0</span>/<span>200</span>
+        </div>
+    </div>
+
+    <div class="menu-title">请提供相关问题的截图或照片</div>
+    <div class="image-box">
+        <div class="upload-btn" tapmode>
+            <p><img src="../../image/icon_image_upload.png"></p>
+        </div>
+
+        <div class="tips">
+            <span>0</span>/<span>5</span>
+        </div>
+    </div>
+</form>
+
+<div class="submit-btn">
+    <button tapmode>提交</button>
+</div>
+
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/zepto.js"></script>
+<script type="text/javascript" src="../../script/functions.js"></script>
+<script type="text/javascript" src="./feedback.js"></script>
+
+</body>
+</html>

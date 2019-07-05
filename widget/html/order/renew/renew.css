@@ -1,0 +1,11 @@
+.menu-group .item label{
+    color: #666;
+}
+
+.menu-group .expired label, .menu-group .item span{
+    color: #333;
+}
+
+.menu-group .item .text-danger{
+    color: #db4003!important;
+}

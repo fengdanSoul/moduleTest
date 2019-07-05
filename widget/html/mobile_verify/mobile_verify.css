@@ -1,0 +1,58 @@
+.menu-title{
+    font-size: 12px;
+    padding: 10px 15px;
+}
+
+.menu-title span{
+    color: #db4003;
+}
+
+.image-box{
+    background: #fff;
+    padding: 15px;
+    padding-bottom: 40px;
+}
+
+.image-box .tips{
+    color: #999;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 14px;
+}
+
+.image-box .wrap{
+    width: 100%;
+    overflow: hidden;
+    clear: both;
+}
+
+.image-box .item, .upload-btn{
+    display: block;
+    width: calc(20% - 15px);
+    margin-right: 15px;
+    float: left;
+}
+
+.image-box .item p{
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.image-box img{
+    width: 100%;
+    display: block;
+}
+
+#imei-box{
+    padding: 12px 15px;
+    background: #fff;
+    overflow: hidden;
+}
+
+#imei-box input{
+    width: 100%;
+    line-height: 20px;
+    height: 20px;
+    font-size: 14px;
+}
